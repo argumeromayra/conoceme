@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿Qué tanto me conoces?</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <p class="eyebrow">EL TEST DEFINITIVO</p>
+      <h1>¿Qué tanto me conoces?</h1>
+      <p>Bienvenidx, demuestra qué tanto sabes sobre mí.</p>
+    </header>
+
+    <section id="intro" class="panel">
+      <h2>Pero primero...</h2>
+      <label for="nombre">¿Cuál es tu nombre?</label>
+      <input id="nombre" type="text" placeholder="Escribe tu nombre" autocomplete="given-name">
+      <label for="cuanto">¿Hace cuánto nos conocemos?</label>
+      <input id="cuanto" type="text" placeholder="Ej. Desde hace 2 años">
+      <button id="startBtn" type="button">¡Comenzar!</button>
+      <p id="introError" class="error" aria-live="polite"></p>
+    </section>
+
+    <section id="quiz" class="panel hidden">
+      <div class="quiz-top">
+        <span id="progressText">Pregunta 1 de 10</span>
+        <span id="scoreText">0 correctas</span>
+      </div>
+      <div class="progress"><div id="progressBar"></div></div>
+      <form id="quizForm">
+        <h2 id="questionText"></h2>
+        <div id="answerArea" class="answers"></div>
+        <p id="feedback" class="feedback" aria-live="polite"></p>
+        <button id="nextBtn" type="submit">Comprobar respuesta</button>
+      </form>
+    </section>
+
+    <section id="result" class="panel hidden" aria-live="polite">
+      <p class="eyebrow">RESULTADO FINAL</p>
+      <h2 id="resultTitle"></h2>
+      <p id="resultMessage"></p>
+      <div class="score-circle"><span id="finalScore">0/10</span></div>
+      <p id="finalBreakdown"></p>
+      <button id="restartBtn" type="button">Volver a jugar</button>
+    </section>
+    <footer>Hecho con mucho cariño ♡</footer>
+  </main>
+</body>
+</html>
